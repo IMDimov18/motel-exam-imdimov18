@@ -5,9 +5,9 @@ using namespace std;
 
 struct ROOM_PRICING
 {
-    int sRoomPrice=50;
-    int dRoomPrice=90;
-    int maisonettePrice = 135;
+    int sRoomPrice;
+    int dRoomPrice;
+    int maisonettePrice;
 };
 
 struct BOOKING
@@ -31,16 +31,18 @@ public:
     ROOM_PRICING getRoomPricing()
     {
         ROOM_PRICING pr;
-        vector<int> prices;
-        prices.push_back(pr.dRoomPrice);
-        prices.push_back(pr.sRoomPrice);
-        prices.push_back(pr.maisonettePrice);
-        return prices;
+        pr.sRoomPrice = 50;
+        pr.dRoomPrice = 90;
+        pr.maisonettePrice = 135;
+        return pr;
     }
 
     string rentRoom(string clientName, string roomType, int numberOfNights)
     {
-        
+        cin >> clientName;
+        cin >> roomType;
+        cin >> numberOfNights;
+
     }
 
     int checkOut(int bookingNumber)
@@ -53,15 +55,9 @@ private:
     int capacity;
     vector<int> bookings;
     int currentBookingNumber = 1;
-    int sRoomCount;
-    int dRoomCount;
-    int maisonetteCount;
-    int d = 40;
-    int s = 40;
-    int m = 20;
 };
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
 }
